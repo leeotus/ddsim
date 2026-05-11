@@ -5,6 +5,10 @@ project(ddsim
         DESCRIPTION "DDSIM - A JKQ quantum simulator based on decision diagrams"
         )
 
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 option(COVERAGE "Configure for coverage report generation")
 option(BINDINGS "Configure for building Python bindings")
@@ -37,7 +41,7 @@ check_submodule_present(cxxopts)
 
 add_subdirectory(src)
 
-option(BUILD_DDSIM_TESTS "Also build tests and benchmarks for DDSIM project" OFF)
+option(BUILD_DDSIM_TESTS "Also build tests and benchmarks for DDSIM project" ON)
 if (BUILD_DDSIM_TESTS)
     check_submodule_present(qfr/extern/dd_package/extern/benchmark)
 
@@ -47,6 +51,8 @@ if (BUILD_DDSIM_TESTS)
         set(BENCHMARK_ENABLE_TESTING OFF CACHE BOOL "Skip gbenchmark self tests")
         add_subdirectory("extern/qfr/extern/dd_package/extern/benchmark" EXCLUDE_FROM_ALL)
     endif ()
+
+    message("enable test subdirectory")
     add_subdirectory(test)
 endif ()
 

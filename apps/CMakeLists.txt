@@ -28,3 +28,5 @@ if (OpenCV_FOUND)
 endif()
 add_sim_executable(vectors)
 
+add_sim_executable(stoch_noise cxxopts::cxxopts)
+
