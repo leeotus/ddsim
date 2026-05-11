@@ -1,0 +1,5 @@
+if(EXISTS "/home/flareon/workshop/ddsim/staticDebug/test/ddsim_test[1]_tests.cmake")
+  include("/home/flareon/workshop/ddsim/staticDebug/test/ddsim_test[1]_tests.cmake")
+else()
+  add_test(ddsim_test_NOT_BUILT ddsim_test_NOT_BUILT)
+endif()

@@ -1,0 +1,11 @@
+{
+    "workbench.colorCustomizations": {
+        "tree.indentGuidesStroke": "#05ef3c",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.debuggingForeground": "#ffffff",
+        "editorCursor.foreground": "#FF0000",
+        "terminalCursor.foreground": "#FF0000",
+        "minimap.background": "#00000088",
+        "scrollbar.shadow": "#00000088"
+    }
+}

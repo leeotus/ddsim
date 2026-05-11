@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ddsim_primebases.dir/primebases.cpp.o -o ddsim_primebases  ../src/libddsim.a /usr/lib/x86_64-linux-gnu/libboost_program_options.so.1.74.0 ../src/extern/qfr/src/libqfr.a ../src/extern/qfr/src/extern/dd_package/src/libdd_package.a 

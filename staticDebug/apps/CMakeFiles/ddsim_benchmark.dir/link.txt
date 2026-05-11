@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ddsim_benchmark.dir/benchmark.cpp.o -o ddsim_benchmark  ../src/libddsim.a ../extern/benchmark/src/libbenchmark_main.a ../src/extern/qfr/src/libqfr.a ../src/extern/qfr/src/extern/dd_package/src/libdd_package.a ../extern/benchmark/src/libbenchmark.a /usr/lib/x86_64-linux-gnu/librt.a 

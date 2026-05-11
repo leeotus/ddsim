@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/ddsim_vectors.dir/vectors.cpp.o -o ddsim_vectors  ../src/libddsim.a ../src/extern/qfr/src/libqfr.a ../src/extern/qfr/src/extern/dd_package/src/libdd_package.a 
