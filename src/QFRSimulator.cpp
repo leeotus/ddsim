@@ -53,6 +53,7 @@ void QFRSimulator::single_shot() {
 
     for (auto &op : *qc) {
         if (op->isNonUnitaryOperation()) {
+            // NonUnitary Operation的操作流程
             if (auto *nu_op = dynamic_cast<qc::NonUnitaryOperation *>(op.get())) {
                 if (op->getType() == qc::Measure) {
                     auto quantum = nu_op->getControls();

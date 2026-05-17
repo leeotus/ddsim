@@ -1,0 +1,36 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "noise-aware",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/ddsim_noise_aware",
+            "args": [
+                "--noise_effects",
+                "APD",
+                "--stoch_runs",
+                "10000",
+                "--noise_prob",
+                "0.005",
+                "--simulate_file",
+                "/home/flareon/workshop/ltqmdd/circuits/revLib/alu4_201.real"
+            ],
+            "stopAtEntry": true,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        }
+    ]
+}

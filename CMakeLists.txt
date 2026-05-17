@@ -9,6 +9,7 @@ project(ddsim
         LANGUAGES CXX)
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 SET(COVERAGE OFF CACHE BOOL "Coverage")
 option(BUILD_SHARED_LIBS "Build shared libraries (.dll/.so) instead of static ones (.lib/.a)" OFF)
 
