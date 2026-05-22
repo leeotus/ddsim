@@ -91,7 +91,11 @@ public:
 
     char gate_noise[5] = {0};
 
-    unsigned short max_instances = std::thread::hardware_concurrency();
+    // multi-threading
+    // unsigned short max_instances = std::thread::hardware_concurrency();
+
+    // EXPPERIMENT: use this to limit the number of threads
+    unsigned short max_instances = 1;
 
 
 protected:

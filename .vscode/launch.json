@@ -17,6 +17,8 @@
                 "10000",
                 "--noise_prob",
                 "0.005",
+                "--dynamic_reorder",
+                "0",
                 "--simulate_file",
                 "/home/flareon/workshop/ltqmdd/circuits/revLib/alu4_201.real"
             ],

@@ -36,7 +36,7 @@ int main(int argc, char** argv) {
             ("step_fidelity", po::value<double>()->default_value(1.0), "target fidelity for each approximation run (>=1 = disable approximation)")
             ("steps", po::value<unsigned int>()->default_value(1), "number of approximation steps")
             ("initial_reorder", po::value<int>()->default_value(0), "Try to find a good initial variable order (0=None, 1=Most affected qubits to the top, 2=Most affected targets to the top)")
-            ("dynamic_reorder", po::value<int>()->default_value(0), "Apply reordering strategy during simulation (0=None, 1=Sifting, 2=Move2Top)")
+            ("dynamic_reorder", po::value<int>()->default_value(0), "Apply reordering strategy during simulation (0=None, 1=Sifting, 2=Move2Top, 3=LinearTransfer)")
             ("post_reorder", po::value<int>()->default_value(0), "Apply a reordering strategy after simulation (0=None, 1=Sifting)")
 
             ("simulate_grover", po::value<unsigned int>(), "simulate Grover's search for given number of qubits with random oracle")
@@ -125,6 +125,8 @@ int main(int argc, char** argv) {
     auto t2 = std::chrono::high_resolution_clock::now();
 
     std::chrono::duration<float> duration_simulation = t2-t1;
+    // print duration simulation for benchmarking
+    std::cout << "Duration simulation: " << duration_simulation.count() << "s\r\n";
 
     if (vm.count("benchmark")) {
         auto more_info = ddsim->AdditionalStatistics();
